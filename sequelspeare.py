@@ -183,7 +183,7 @@ class SequelSpeare(irc.bot.SingleServerIRCBot):
                     self.save_json()  # write the reminder to the file.  The background thread will pick it up and issue
                 else:
                     connection.privmsg(event.target, event.source.nick + ': ' +
-                                   'Usage is "!remind [in] 5 (second[s]/minute[s]/hour[s]/day[s]) reminder text"')
+                                       'Usage is "!remind [in] 5 (second[s]/minute[s]/hour[s]/day[s]) reminder text"')
         elif not cmd_text.startswith("!"):  # query the network with the text
             response = self.query_network(event.source.nick, cmd_text)
             connection.privmsg(event.target, event.source.nick + ': ' + response)
